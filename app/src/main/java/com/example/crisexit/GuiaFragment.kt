@@ -10,6 +10,17 @@ import android.view.ViewGroup
 
 class GuiaFragment : Fragment() {
 
+    companion object {
+        fun newInstance(): GuiaFragment {
+            var guiaFragment = GuiaFragment()
+            var args = Bundle()
+            guiaFragment.arguments = args
+
+            return guiaFragment
+        }
+
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
