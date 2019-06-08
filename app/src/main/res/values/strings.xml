@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">crisexit</string>
+    <string name="title_activity_guia">GuiaActivity</string>
+    <string name="title_guia">Guia</string>
+    <string name="title_extrato">Extrato</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_activity_bottom_menu">BottomMenuActivity</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
