@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "938597830254",
+    "firebase_url": "https://app-crisexit.firebaseio.com",
+    "project_id": "app-crisexit",
+    "storage_bucket": "app-crisexit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938597830254:android:ac024aebb90bb391",
+        "android_client_info": {
+          "package_name": "com.example.crisexit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938597830254-hq62cuaiqoes07ptb34gujdkuq2qni00.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJE3_F5P-NoFFnxVUcdw6LEt2o2pGNJCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938597830254-hq62cuaiqoes07ptb34gujdkuq2qni00.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

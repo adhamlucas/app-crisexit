@@ -5,10 +5,27 @@
              android:layout_height="match_parent"
              tools:context=".GuiaFragment">
 
-
-    <TextView
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="HIii estou na GUIA"/>
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/guia_list_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="HIii estou na GUIA"/>-->
+
+    </LinearLayout>
+
 
 </FrameLayout>
