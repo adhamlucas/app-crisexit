@@ -27,7 +27,6 @@ class GuiaAdapter(private val guiaItens: List<GuiaItem>): Adapter<GuiaHolder>(){
 
         holder?.let{
             it.bindView(guiaItem)
-            //holder.image.text = guiaItem.guiaImage falta colocar o picasso para adicionar imagem
         }
 
     }

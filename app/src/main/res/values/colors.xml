@@ -12,4 +12,8 @@
     <color name="add_gasto_pressed">#FF5252</color>
     <color name="float_button">#D500F9</color>
     <color name="float_button_pressed">#E040FB</color>
+    <color name="valorTotalPositivo">#76FF03</color>
+    <color name="calculatorActionButton">#1DE9B6</color>
+    <color name="calculatorActionButton2">#636363</color>
+    <color name="calculatorNumberButton">#434343</color>
 </resources>
