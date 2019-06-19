@@ -20,10 +20,6 @@ import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QuerySnapshot
-import io.opencensus.resource.Resource
-import org.jetbrains.anko.support.v4.onRefresh
-import org.jetbrains.anko.support.v4.swipeRefreshLayout
-import org.w3c.dom.Text
 
 class FireBaseHandler {
     private var dataBase = FirebaseFirestore.getInstance()

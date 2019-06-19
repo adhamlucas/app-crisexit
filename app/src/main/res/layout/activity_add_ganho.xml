@@ -21,27 +21,38 @@
 			android:layout_marginTop="8dp"
 			app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
 			app:layout_constraintStart_toStartOf="parent"/>
-	<Button
-			android:id="@+id/button_adicionar_ganho"
-			android:text="Adicionar"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			tools:ignore="MissingConstraints"
-			android:layout_marginTop="72dp"
-			app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-			app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-			app:layout_constraintStart_toStartOf="@+id/textInputLayout"/>
-	<com.google.android.material.textfield.TextInputLayout
+
+	<Spinner
+			android:id="@+id/spinner_category_add_ganho"
 			android:layout_width="395dp"
 			android:layout_height="wrap_content"
-			tools:layout_editor_absoluteX="8dp" android:layout_marginTop="8dp"
-			app:layout_constraintTop_toBottomOf="@+id/valorGanho" android:id="@+id/textInputLayout">
+			app:layout_constraintTop_toBottomOf="@+id/valorGanho"
+			tools:layout_editor_absoluteX="8dp"
+			android:layout_marginTop="8dp"/>
+
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/textInputLayout"
+			android:layout_width="395dp"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toBottomOf="@+id/spinner_category_add_ganho"
+			app:layout_constraintEnd_toEndOf="@+id/spinner_category_add_ganho"
+			app:layout_constraintStart_toStartOf="@+id/spinner_category_add_ganho">
 
 		<com.google.android.material.textfield.TextInputEditText
 				android:id="@+id/descricaoGanho"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:hint="hint"/>
+
 	</com.google.android.material.textfield.TextInputLayout>
+	<Button
+			android:id="@+id/button_adicionar_ganho"
+			android:text="Adicionar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			tools:ignore="MissingConstraints"
+			app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+			app:layout_constraintStart_toStartOf="@+id/textInputLayout" android:layout_marginTop="8dp"
+			app:layout_constraintTop_toBottomOf="@+id/textInputLayout"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
