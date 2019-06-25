@@ -3,12 +3,25 @@ package com.example.crisexit
 import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.JsonToken
 import android.util.Log
 import android.view.View
 import android.widget.*
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.Response.Listener
+import com.android.volley.toolbox.JsonArrayRequest
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.example.crisexit.Adapters.CategoryGanhoAdapter
 import com.example.crisexit.Model.CategoryItem
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
+import com.google.gson.JsonObject
 import kotlinx.android.synthetic.main.activity_add_ganho.*
+import org.json.JSONObject
+import java.lang.Exception
 
 class AddGanho : AppCompatActivity() {
     var fireBaseHandler = FireBaseHandler()
@@ -17,19 +30,19 @@ class AddGanho : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-
-        loadCategories()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_ganho)
 
-        var valorGanho: TextView = findViewById(R.id.valorGanho)
+        val intent = getIntent()
+        val token = intent.getStringExtra("TOKEN")
+
+        var valorGanho: TextInputEditText = findViewById(R.id.VALOR)
         var descricaoGanho: EditText = findViewById(R.id.descricaoGanho)
         var buttonAddGanho: Button = findViewById(R.id.button_adicionar_ganho)
         val spinnerCategory: Spinner = findViewById(R.id.spinner_category_add_ganho)
-
         loadCategories()
 
         spinnerCategory.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
@@ -44,7 +57,12 @@ class AddGanho : AppCompatActivity() {
         }
 
         var valor = 0.0
-        valorGanho.text = toCashFormat(valor)
+
+        valorGanho.setOnClickListener {
+            valorGanho.hint = toCashFormat(valor)
+        }
+
+
 
         var descricao: String = descricaoGanho.text.toString()
         Log.d(TAG, descricao)
@@ -62,6 +80,7 @@ class AddGanho : AppCompatActivity() {
     }
 
     //FALTA SELECIONAR SOMENTE AS CATEGORIA DE ENTRADA!!!!!
+
     fun loadCategories(){
         categories = mutableListOf()
 

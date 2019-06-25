@@ -3,6 +3,7 @@ package com.example.crisexit
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -48,6 +49,7 @@ class ExtratoFragment : Fragment() {
 
         addGanhoButton.setOnClickListener {
             val intent = Intent(context, AddGanho::class.java)
+
             startActivity(intent)
         }
         addGastoButton.setOnClickListener{
